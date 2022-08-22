@@ -1,0 +1,53 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+
+   class NoElement extends Exception{
+    NoElement(String e){
+        super(e);
+        //System.out.println("No negative element accepted");
+    }
+}
+
+class HelloWorld {
+  
+    
+    
+    int n=0;
+     public int Add(int[] numbers){
+         for(int i=0;i<numbers.length;i++){
+            n=n+numbers[i]; 
+         }
+            return n;
+        }
+    public static void main(String[] args) {
+       // System.out.println("Hello, World!");
+        int n=0;
+        
+        HelloWorld h=new HelloWorld();
+       // h.Add({1,2,3});
+        Scanner sc=new Scanner(System.in);
+        int[] arr=new int[2];
+        for(int i=0;i<2;i++){
+            try{
+              
+                arr[i]=sc.nextInt();
+                 if(arr[i]<0){
+                   throw new NoElement("No negative accepted ");
+               }
+           // } if()
+            }catch(NoElement e){
+                  System.out.println("No negative accepted ");  
+            }
+           
+           
+        }
+       // h.Add(arr);
+        System.out.println(h.Add(arr)+"----->Answer");
+      
+        
+       
+        
+        
+    }
+}
